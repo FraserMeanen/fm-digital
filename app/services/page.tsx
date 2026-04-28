@@ -2,21 +2,51 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function Home() {
+export default function ServicesPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [visibleSections, setVisibleSections] = useState([false, false, false]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number((entry.target as HTMLElement).dataset.index);
+
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => {
+              const updated = [...prev];
+              updated[index] = true;
+              return updated;
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    serviceRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <main className="min-h-screen bg-black bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.10),transparent_55%)] px-4 py-8 text-white md:px-6">
       <div className="mx-auto max-w-7xl">
-        <nav className="relative mb-12 flex items-center justify-center pt-4 md:mb-20 md:justify-between">
+        <nav className="relative mb-6 flex items-center justify-center pt-6 md:mb-20 md:justify-between">
           <Image
             src="/logo.png"
             alt="FM Digital"
             width={220}
             height={100}
-            className="object-contain h-auto w-auto"
+            loading="eager"
+            className="h-auto w-auto object-contain"
           />
 
           <div className="hidden gap-8 text-base font-light text-white/70 md:flex">
@@ -27,7 +57,7 @@ export default function Home() {
               Services
             </Link>
             <Link href="/project" className="transition hover:text-[#2f8f55]">
-              Project
+              Projects
             </Link>
             <Link href="/contact" className="transition hover:text-[#2f8f55]">
               Contact
@@ -43,58 +73,61 @@ export default function Home() {
               className={`h-[2px] w-6 bg-white transition-transform duration-500 ${
                 menuOpen ? "translate-y-[6px] rotate-45" : ""
               }`}
-            ></span>
+            />
             <span
               className={`h-[2px] w-6 bg-white transition-opacity duration-500 ${
                 menuOpen ? "opacity-0" : "opacity-100"
               }`}
-            ></span>
+            />
             <span
               className={`h-[2px] w-6 bg-white transition-transform duration-500 ${
                 menuOpen ? "-translate-y-[6px] -rotate-45" : ""
               }`}
-            ></span>
+            />
           </button>
+        </nav>
 
-          <div
-            className={`absolute right-0 top-full z-50 mt-3 w-48 rounded-xl border border-white/10 bg-black/85 p-3 shadow-2xl backdrop-blur-md transition-all duration-1000 ease-in-out md:hidden ${
-              menuOpen
-                ? "pointer-events-auto translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-2 opacity-0"
-            }`}
-          >
+        <div
+          className={`overflow-hidden transition-all duration-700 ease-in-out md:hidden ${
+            menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="mb-8 mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 shadow-2xl backdrop-blur-md">
             <div className="flex flex-col gap-2 text-sm text-white/80">
               <Link
                 href="/"
-                className="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
                 Home
               </Link>
+
               <Link
                 href="/services"
-                className="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
                 Services
               </Link>
+
               <Link
                 href="/project"
-                className="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
                 Project
               </Link>
+
               <Link
                 href="/contact"
-                className="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact
               </Link>
             </div>
           </div>
-        </nav>
+        </div>
 
         <section className="mt-10 md:mt-32">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
@@ -109,7 +142,17 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-col gap-6 md:mt-24">
-            <div className="flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left">
+            <div
+              ref={(el) => {
+                serviceRefs.current[0] = el;
+              }}
+              data-index="0"
+              className={`flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center transition-all duration-1100 md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left ${
+                visibleSections[0]
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+            >
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
                   Web Development
@@ -130,15 +173,26 @@ export default function Home() {
               <div className="flex w-full justify-center md:w-1/2 md:justify-end">
                 <Image
                   src="/laptop-up.png"
-                  alt="Web development preview"
+                  alt="Website preview"
                   width={520}
                   height={340}
-                  className="h-auto w-full max-w-[320px] object-contain sm:max-w-[420px] md:max-w-[520px]"
+                  loading="eager"
+                  className="h-auto w-full max-w-[340px] rounded-2xl object-contain drop-shadow-2xl sm:max-w-md md:max-w-none"
                 />
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left">
+            <div
+              ref={(el) => {
+                serviceRefs.current[1] = el;
+              }}
+              data-index="1"
+              className={`flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center transition-all delay-200 duration-1100 md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left ${
+                visibleSections[1]
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+            >
               <div className="order-2 w-full md:order-1 md:w-1/2 md:flex md:justify-start">
                 <Image
                   src="/coffee_phone.png"
@@ -167,7 +221,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left">
+            <div
+              ref={(el) => {
+                serviceRefs.current[2] = el;
+              }}
+              data-index="2"
+              className={`flex flex-col items-center gap-10 border border-white/10 bg-white/5 p-6 text-center transition-all delay-400 duration-1100 md:h-[400px] md:flex-row md:gap-12 md:p-8 md:text-left ${
+                visibleSections[2]
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+            >
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
                   Ongoing Support
