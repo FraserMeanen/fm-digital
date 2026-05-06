@@ -144,12 +144,12 @@ export default function Home() {
         <section className="mt-4 flex flex-col gap-10 md:mt-32 md:flex-row">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:max-w-xl md:text-6xl">
-              Elevating Your Online Presence
+              Websites, Apps & Digital Solutions
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-gray-300 md:mx-0 md:max-w-md">
-              We build sleek, professional websites designed to drive your
-              business forward.
+              FM Digital builds modern websites, landing pages, mobile apps and
+              web apps designed to help businesses grow online.
             </p>
 
             <Link
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="flex w-full justify-center pt-2 md:w-3/5 md:justify-end md:pt-6">
             <Image
               src="/laptop-up.png"
-              alt="Website preview"
+              alt="FM Digital website and app development preview"
               width={880}
               height={550}
               loading="eager"
@@ -174,7 +174,7 @@ export default function Home() {
 
         <section className="mt-32">
           <h2 className="text-center text-3xl font-light leading-tight tracking-tight">
-            Our Services
+            Website, App & SEO Services
           </h2>
 
           <div className="mt-12 flex flex-col gap-6 md:flex-row">
@@ -199,8 +199,8 @@ export default function Home() {
               <h3 className="text-xl font-semibold">Web Development</h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                Crafting modern, responsive websites that make your business
-                stand out.
+                Modern, responsive websites and landing pages built to help your
+                business look professional and convert visitors into enquiries.
               </p>
             </div>
 
@@ -225,8 +225,8 @@ export default function Home() {
               <h3 className="text-xl font-semibold">Mobile App Development</h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                Building custom apps tailored to your business and customer
-                needs.
+                Mobile apps and web apps designed around your business
+                processes, customers and future growth.
               </p>
             </div>
 
@@ -248,11 +248,11 @@ export default function Home() {
                 height={175}
                 className="mx-auto h-[120px] w-auto object-contain md:mx-0"
               />
-              <h3 className="text-xl font-semibold">Ongoing Support</h3>
+              <h3 className="text-xl font-semibold">SEO & Ongoing Support</h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                Providing reliable support and maintenance to keep your site
-                running smoothly.
+                SEO-focused improvements, website maintenance and ongoing
+                digital support to keep your online presence moving forward.
               </p>
             </div>
           </div>
@@ -285,6 +285,7 @@ export default function Home() {
                       src="/gillespie_screenshot.png"
                       alt="P. Gillespie & Son Stonework website"
                       fill
+                      loading="eager"
                       className="object-cover object-top transition duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 48vw"
                     />

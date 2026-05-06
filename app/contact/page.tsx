@@ -136,12 +136,12 @@ export default function ContactPage() {
         <section className="mt-10 md:mt-32">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:max-w-xl md:text-6xl">
-              Contact
+              Contact FM Digital
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0 md:max-w-lg">
-              Let’s talk about your next project. I’ll get back to you as soon
-              as possible.
+              Get in touch to discuss a website, landing page, mobile app, web
+              app or SEO-focused digital project.
             </p>
 
             <div className="mx-auto mt-8 h-[2px] w-16 bg-[#2f8f55] md:mx-0" />
@@ -171,7 +171,8 @@ export default function ContactPage() {
               <h3 className="mt-6 text-xl font-light text-white">Email</h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Send me an email and I’ll get back to you.
+                Email FM Digital to discuss your website, app or digital
+                project.
               </p>
 
               <div className="mt-6 flex items-center justify-between">
@@ -209,13 +210,19 @@ export default function ContactPage() {
               <h3 className="mt-6 text-xl font-light text-white">Facebook</h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Facebook page coming soon.
+                Follow FM Digital on Facebook for website, app, SEO and digital
+                project updates.
               </p>
 
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-sm text-[#2f8f55]">
-                  Facebook page TBC
-                </span>
+                <Link
+                  href="https://www.facebook.com/people/FM-Digital/61588982026581/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#2f8f55] transition hover:text-white"
+                >
+                  FM Digital Facebook
+                </Link>
 
                 <span className="text-[#2f8f55]">↗</span>
               </div>
@@ -248,7 +255,8 @@ export default function ContactPage() {
               <h3 className="mt-6 text-xl font-light text-white">Instagram</h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Follow or message on Instagram.
+                Follow or message FM Digital on Instagram for project updates
+                and digital services.
               </p>
 
               <div className="mt-6 flex items-center justify-between">

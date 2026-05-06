@@ -132,12 +132,13 @@ export default function ServicesPage() {
         <section className="mt-10 md:mt-32">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:max-w-xl md:text-6xl">
-              Services
+              Website, App & SEO Services
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-gray-300 md:mx-0 md:max-w-xl">
-              We design and build high-quality digital products that help your
-              business grow and stand out.
+              FM Digital designs and builds websites, landing pages, mobile
+              apps, web apps and SEO-focused digital content for businesses
+              across the UK.
             </p>
           </div>
 
@@ -159,21 +160,22 @@ export default function ServicesPage() {
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Custom-built websites tailored to your business, ensuring fast
-                  performance and modern design.
+                  Custom-built websites and landing pages tailored to your
+                  business, with fast performance, responsive design and a clear
+                  focus on enquiries.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• Custom-built websites</li>
-                  <li>• Fast performance</li>
-                  <li>• Mobile responsive</li>
+                  <li>• Business websites and landing pages</li>
+                  <li>• Fast, responsive design</li>
+                  <li>• SEO-ready page structure</li>
                 </ul>
               </div>
 
               <div className="flex w-full justify-center md:w-1/2 md:justify-end">
                 <Image
                   src="/laptop-up.png"
-                  alt="Website preview"
+                  alt="FM Digital website and landing page development preview"
                   width={520}
                   height={340}
                   loading="eager"
@@ -196,7 +198,7 @@ export default function ServicesPage() {
               <div className="order-2 w-full md:order-1 md:w-1/2 md:flex md:justify-start">
                 <Image
                   src="/coffee_phone.png"
-                  alt="App development preview"
+                  alt="FM Digital mobile app and web app development preview"
                   width={300}
                   height={500}
                   className="mx-auto h-auto w-full max-w-[180px] object-contain sm:max-w-[220px] md:mx-0 md:max-h-[80%] md:max-w-[250px]"
@@ -209,14 +211,14 @@ export default function ServicesPage() {
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Creating custom mobile apps that provide seamless, engaging,
-                  and user-friendly experiences for both iOS and Android.
+                  Creating mobile apps and web apps that give businesses better
+                  tools, smoother customer experiences and room to scale.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• iOS & Android apps</li>
-                  <li>• User-centered design</li>
-                  <li>• Feature-rich and scalable</li>
+                  <li>• Mobile apps for iOS and Android</li>
+                  <li>• Web apps and business tools</li>
+                  <li>• Scalable user-focused features</li>
                 </ul>
               </div>
             </div>
@@ -234,26 +236,26 @@ export default function ServicesPage() {
             >
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
-                  Ongoing Support
+                  SEO & Ongoing Support
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Providing reliable support and maintenance to ensure your
-                  website and apps stay secure, updated, and performing
-                  smoothly.
+                  Providing SEO-focused improvements, website maintenance, app
+                  support and technical updates to keep your digital presence
+                  performing.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• Monitoring</li>
-                  <li>• Updates</li>
-                  <li>• Technical support</li>
+                  <li>• SEO improvements</li>
+                  <li>• Website and app updates</li>
+                  <li>• Technical support and maintenance</li>
                 </ul>
               </div>
 
               <div className="flex w-full justify-center md:w-1/2 md:justify-end">
                 <Image
                   src="/head_services.png"
-                  alt="Ongoing support preview"
+                  alt="FM Digital SEO support and website maintenance preview"
                   width={600}
                   height={400}
                   className="h-auto w-full max-w-[320px] object-contain sm:max-w-[420px] md:max-w-[520px]"

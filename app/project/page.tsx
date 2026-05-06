@@ -136,12 +136,13 @@ export default function ProjectsPage() {
         <section className="mt-10 md:mt-32">
           <div className="w-full text-center md:w-[34%] md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:text-6xl">
-              Projects
+              Website & App Projects
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0">
-              A collection of our work. Clean design, strong performance, real
-              results.
+              A collection of FM Digital website, app and digital design
+              projects focused on clean design, strong performance and real
+              business results.
             </p>
           </div>
 
@@ -176,9 +177,10 @@ export default function ProjectsPage() {
                       <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
                         <Image
                           src="/gillespie_screenshot.png"
-                          alt="P. Gillespie & Son Stonework website"
+                          alt="P. Gillespie and Son Stonework website project by FM Digital"
                           fill
-                          className="object-cover object-top transition duration-700 group-hover:scale-105"
+                          loading="eager"
+                          className="object-contain object-top"
                           sizes="(max-width: 768px) 100vw, 46vw"
                         />
                       </div>
@@ -190,9 +192,9 @@ export default function ProjectsPage() {
                       </h3>
 
                       <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
-                        Premium trade website for dry stone dyking and
-                        stonework services across Argyll, Oban and the Western
-                        Isles.
+                        Premium trade website for dry stone dyking, stonework
+                        services and local SEO across Argyll, Oban and the
+                        Western Isles.
                       </p>
 
                       <div className="mt-5 flex flex-wrap gap-2">
@@ -235,7 +237,7 @@ export default function ProjectsPage() {
                     <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
                       <Image
                         src="/one-of-61-screenshot.png"
-                        alt="One of 61 website"
+                        alt="One of 61 speaker website project by FM Digital"
                         fill
                         className="object-contain object-top"
                         sizes="(max-width: 768px) 100vw, 46vw"
@@ -249,8 +251,9 @@ export default function ProjectsPage() {
                     </h3>
 
                     <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
-                      Speaker website with a bold visual identity, clear
-                      messaging, and a strong landing section.
+                      Speaker website and landing page with a bold visual
+                      identity, clear messaging and a strong contact-focused
+                      structure.
                     </p>
 
                     <div className="mt-5 flex flex-wrap gap-2">
