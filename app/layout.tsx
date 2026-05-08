@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -14,6 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fm-digital.co.uk"),
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 
   title: {
     default: "FM Digital | Websites, Apps & SEO-Focused Digital Content",
@@ -66,10 +73,6 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
 
-  alternates: {
-    canonical: "https://www.fm-digital.co.uk",
-  },
-
   robots: {
     index: true,
     follow: true,
@@ -79,7 +82,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html
