@@ -331,6 +331,17 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <footer className="mt-24 border-t border-white/10 py-6 text-center text-xs text-white/40">
+        <p>© 2026 FM Digital. All rights reserved.</p>
+        <p className="mt-1">
+          Website by{" "}
+          <Link href="/" className="transition hover:text-[#2f8f55]">
+            FM Digital
+          </Link>
+          .
+        </p>
+      </footer>
     </main>
   );
 }
