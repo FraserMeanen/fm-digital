@@ -7,7 +7,11 @@ import { useEffect, useRef, useState } from "react";
 export default function ProjectsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [visibleProjects, setVisibleProjects] = useState([false, false]);
+  const [visibleProjects, setVisibleProjects] = useState([
+    false,
+    false,
+    false,
+  ]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -174,7 +178,7 @@ export default function ProjectsPage() {
                 >
                   <div className="flex flex-col md:grid md:min-h-[195px] md:grid-cols-[46%_54%]">
                     <div className="border-b border-white/10 bg-black/25 p-3 md:border-b-0 md:border-r">
-                      <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
+                      <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-white md:h-full md:bg-black">
                         <Image
                           src="/gillespie_screenshot.png"
                           alt="P. Gillespie and Son Stonework website project by FM Digital"
@@ -205,7 +209,7 @@ export default function ProjectsPage() {
                           Development
                         </span>
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
-                          SEO Ready
+                          SEO Optimised
                         </span>
                       </div>
 
@@ -232,40 +236,131 @@ export default function ProjectsPage() {
                     : "translate-y-8 opacity-0"
                 }`}
               >
-                <div className="flex flex-col md:grid md:min-h-[195px] md:grid-cols-[46%_54%]">
-                  <div className="border-b border-white/10 bg-black/25 p-3 md:border-b-0 md:border-r">
-                    <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
-                      <Image
-                        src="/one-of-61-screenshot.png"
-                        alt="One of 61 speaker website project by FM Digital"
-                        fill
-                        className="object-contain object-top"
-                        sizes="(max-width: 768px) 100vw, 46vw"
-                      />
+                <Link
+                  href="https://one-of-61.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="flex flex-col md:grid md:min-h-[195px] md:grid-cols-[46%_54%]">
+                    <div className="border-b border-white/10 bg-black/25 p-3 md:border-b-0 md:border-r">
+                      <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
+                        <Image
+                          src="/one-of-61-screenshot.png"
+                          alt="One of 61 speaker website project by FM Digital"
+                          fill
+                          className="object-contain object-top"
+                          sizes="(max-width: 768px) 100vw, 46vw"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col justify-center p-5">
+                      <h3 className="text-[1.9rem] font-light leading-tight text-white">
+                        One of 61
+                      </h3>
+
+                      <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
+                        Speaker website and landing page with a bold visual
+                        identity, clear messaging and a strong contact-focused
+                        structure.
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
+                          Web Design
+                        </span>
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
+                          Development
+                        </span>
+                      </div>
+
+                      <div className="mt-5 flex items-center gap-2 text-sm text-[#2f8f55]">
+                        <span>View live site</span>
+                        <span className="transition duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </div>
                     </div>
                   </div>
+                </Link>
+              </div>
+            </div>
+          </div>
 
-                  <div className="flex flex-col justify-center p-5">
-                    <h3 className="text-[1.9rem] font-light leading-tight text-white">
-                      One of 61
-                    </h3>
+          {/* Apps */}
+          <div className="mt-20">
+            <h2 className="text-center text-2xl font-light text-white md:text-left md:text-[2.05rem]">
+              Apps
+            </h2>
 
-                    <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
-                      Speaker website and landing page with a bold visual
-                      identity, clear messaging and a strong contact-focused
-                      structure.
-                    </p>
+            <div className="mx-auto mt-2 h-[2px] w-20 bg-[#2f8f55] md:mx-0" />
 
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
-                        Web Design
-                      </span>
-                      <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
-                        Development
-                      </span>
+            <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14">
+              {/* Book Me In */}
+              <div
+                ref={(el) => {
+                  projectRefs.current[2] = el;
+                }}
+                data-index="2"
+                className={`overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.02] transition-all duration-1100 ${
+                  visibleProjects[2]
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0"
+                }`}
+              >
+                <Link
+                  href="https://apps.apple.com/gb/app/book-me-in-classes-near-you/id6800840658"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="flex flex-col md:grid md:min-h-[195px] md:grid-cols-[46%_54%]">
+                    <div className="border-b border-white/10 bg-white p-3 md:border-b-0 md:border-r md:bg-black/25">
+                      <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-white md:h-full md:bg-black">
+                        <Image
+                          src="/bmi-icon-2.png"
+                          alt="Book Me In app project by FM Digital"
+                          fill
+                          loading="eager"
+                          className="object-contain"
+                          sizes="(max-width: 768px) 100vw, 46vw"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col justify-center p-5">
+                      <h3 className="text-[1.9rem] font-light leading-tight text-white">
+                        Book Me In
+                      </h3>
+
+                      <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
+                        Class discovery and booking app connecting customers
+                        with local classes and giving businesses the tools to
+                        manage bookings and schedules.
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
+                          App Design
+                        </span>
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
+                          Development
+                        </span>
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
+                          iOS
+                        </span>
+                      </div>
+
+                      <div className="mt-5 flex items-center gap-2 text-sm text-[#2f8f55]">
+                        <span>View on App Store</span>
+                        <span className="transition duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
