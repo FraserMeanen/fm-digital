@@ -42,7 +42,7 @@ export default function ServicesPage() {
         <nav className="relative mb-6 flex items-center justify-center pt-6 md:mb-20 md:justify-between">
           <Image
             src="/logo.png"
-            alt="FM Digital"
+            alt="FM Digital web design and software development"
             width={220}
             height={100}
             loading="eager"
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                 className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
-                Project
+                Projects
               </Link>
 
               <Link
@@ -132,13 +132,14 @@ export default function ServicesPage() {
         <section className="mt-10 md:mt-32">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:max-w-xl md:text-6xl">
-              Website, App & SEO Services
+              Web Design, Software Development, Apps & SEO
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-gray-300 md:mx-0 md:max-w-xl">
-              FM Digital designs and builds websites, landing pages, mobile
-              apps, web apps and SEO-focused digital content for businesses
-              across the UK.
+              FM Digital is a Glasgow-based web design and software development
+              studio providing websites, custom software, web applications,
+              mobile apps and SEO services for businesses across Glasgow,
+              Aberdeen, Scotland and the UK.
             </p>
           </div>
 
@@ -156,26 +157,27 @@ export default function ServicesPage() {
             >
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
-                  Web Development
+                  Web Design & Website Development
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Custom-built websites and landing pages tailored to your
-                  business, with fast performance, responsive design and a clear
-                  focus on enquiries.
+                  Professional web design and custom website development focused
+                  on fast performance, responsive layouts, search visibility and
+                  turning visitors into enquiries. We build websites for
+                  businesses in Glasgow, Aberdeen and across the UK.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• Business websites and landing pages</li>
-                  <li>• Fast, responsive design</li>
-                  <li>• SEO-ready page structure</li>
+                  <li>• Business websites and high-converting landing pages</li>
+                  <li>• Responsive, fast and modern website development</li>
+                  <li>• SEO-ready structure built for Google search visibility</li>
                 </ul>
               </div>
 
               <div className="flex w-full justify-center md:w-1/2 md:justify-end">
                 <Image
                   src="/laptop-up.png"
-                  alt="FM Digital website and landing page development preview"
+                  alt="FM Digital web design and website development services in Glasgow and across the UK"
                   width={520}
                   height={340}
                   loading="eager"
@@ -198,7 +200,7 @@ export default function ServicesPage() {
               <div className="order-2 w-full md:order-1 md:w-1/2 md:flex md:justify-start">
                 <Image
                   src="/coffee_phone.png"
-                  alt="FM Digital mobile app and web app development preview"
+                  alt="FM Digital custom software, web app and mobile app development services"
                   width={300}
                   height={500}
                   className="mx-auto h-auto w-full max-w-[180px] object-contain sm:max-w-[220px] md:mx-0 md:max-h-[80%] md:max-w-[250px]"
@@ -207,18 +209,21 @@ export default function ServicesPage() {
 
               <div className="order-1 w-full md:order-2 md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
-                  App Development
+                  Software & App Development
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Creating mobile apps and web apps that give businesses better
-                  tools, smoother customer experiences and room to scale.
+                  Bespoke software, web applications and mobile apps designed
+                  around real business processes. From booking platforms and
+                  customer portals to dashboards, internal systems and scalable
+                  digital products, we build software around the way your
+                  business actually works.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• Mobile apps for iOS and Android</li>
-                  <li>• Web apps and business tools</li>
-                  <li>• Scalable user-focused features</li>
+                  <li>• Custom business software and web applications</li>
+                  <li>• Mobile app development for iOS and Android</li>
+                  <li>• Booking systems, dashboards, portals and digital platforms</li>
                 </ul>
               </div>
             </div>
@@ -236,26 +241,27 @@ export default function ServicesPage() {
             >
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-light md:text-3xl">
-                  SEO & Ongoing Support
+                  SEO & Ongoing Digital Support
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-md text-gray-300 md:mx-0">
-                  Providing SEO-focused improvements, website maintenance, app
-                  support and technical updates to keep your digital presence
-                  performing.
+                  SEO, website optimisation, maintenance and technical support
+                  designed to improve Google visibility, strengthen local search
+                  rankings and keep websites and digital products performing as
+                  your business grows.
                 </p>
 
                 <ul className="mx-auto mt-6 max-w-md space-y-2 text-gray-300 md:mx-0">
-                  <li>• SEO improvements</li>
-                  <li>• Website and app updates</li>
-                  <li>• Technical support and maintenance</li>
+                  <li>• Local and on-page SEO improvements</li>
+                  <li>• Website optimisation, maintenance and updates</li>
+                  <li>• Ongoing technical support for websites and apps</li>
                 </ul>
               </div>
 
               <div className="flex w-full justify-center md:w-1/2 md:justify-end">
                 <Image
                   src="/head_services.png"
-                  alt="FM Digital SEO support and website maintenance preview"
+                  alt="FM Digital SEO, local search optimisation and website support services"
                   width={600}
                   height={400}
                   className="h-auto w-full max-w-[320px] object-contain sm:max-w-[420px] md:max-w-[520px]"
@@ -268,8 +274,9 @@ export default function ServicesPage() {
 
       <footer className="mt-24 border-t border-white/10 py-6 text-center text-xs text-white/40">
         <p>© 2026 FM Digital. All rights reserved.</p>
+
         <p className="mt-1">
-          Website by{" "}
+          Glasgow-based web design, software development and app development by{" "}
           <Link href="/" className="transition hover:text-[#2f8f55]">
             FM Digital
           </Link>

@@ -54,7 +54,7 @@ export default function Home() {
         <nav className="relative mb-6 flex items-center justify-center pt-6 md:mb-20 md:justify-between">
           <Image
             src="/logo.png"
-            alt="FM Digital"
+            alt="FM Digital web design and software development"
             width={220}
             height={100}
             loading="eager"
@@ -127,7 +127,7 @@ export default function Home() {
                 className="rounded-xl px-4 py-3 transition duration-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setMenuOpen(false)}
               >
-                Project
+                Projects
               </Link>
 
               <Link
@@ -144,26 +144,28 @@ export default function Home() {
         <section className="mt-4 flex flex-col gap-10 md:mt-32 md:flex-row">
           <div className="w-full pt-0 text-center md:w-2/5 md:pt-8 md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:max-w-xl md:text-6xl">
-              Websites, Apps & Digital Solutions
+              Web Design, Software & App Development
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-gray-300 md:mx-0 md:max-w-md">
-              FM Digital builds modern websites, landing pages, mobile apps and
-              web apps designed to help businesses grow online.
+              FM Digital is a Glasgow-based web design and software development
+              studio creating modern websites, custom software, web apps and
+              mobile apps for businesses across Glasgow, Aberdeen, Scotland and
+              the UK.
             </p>
 
             <Link
               href="/contact"
               className="mt-8 inline-block rounded-xl border border-white/20 bg-gradient-to-r from-black via-[#0f2e1f] to-[#1f6f4a] px-10 py-4 font-medium text-white transition hover:scale-[1.02]"
             >
-              Get Started
+              Start Your Project
             </Link>
           </div>
 
           <div className="flex w-full justify-center pt-2 md:w-3/5 md:justify-end md:pt-6">
             <Image
               src="/laptop-up.png"
-              alt="FM Digital website and app development preview"
+              alt="FM Digital web design, software development and app development projects"
               width={880}
               height={550}
               loading="eager"
@@ -174,7 +176,7 @@ export default function Home() {
 
         <section className="mt-32">
           <h2 className="text-center text-3xl font-light leading-tight tracking-tight">
-            Website, App & SEO Services
+            Web Design, Software Development, App Development & SEO
           </h2>
 
           <div className="mt-12 flex flex-col gap-6 md:flex-row">
@@ -191,16 +193,21 @@ export default function Home() {
             >
               <Image
                 src="/web_graphic.png"
-                alt="Web development icon"
+                alt="Web design and website development services by FM Digital"
                 width={175}
                 height={175}
                 className="mx-auto h-[120px] w-auto object-contain md:mx-0"
               />
-              <h3 className="text-xl font-semibold">Web Development</h3>
+
+              <h3 className="text-xl font-semibold">
+                Web Design & Development
+              </h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                Modern, responsive websites and landing pages built to help your
-                business look professional and convert visitors into enquiries.
+                Professional web design and website development for businesses
+                in Glasgow, Aberdeen and across the UK, with responsive design,
+                fast performance, clear user journeys and SEO-ready foundations
+                built to generate enquiries.
               </p>
             </div>
 
@@ -217,16 +224,21 @@ export default function Home() {
             >
               <Image
                 src="/phone_graphic.png"
-                alt="Mobile development icon"
+                alt="Custom software, web app and mobile app development services"
                 width={175}
                 height={175}
                 className="mx-auto h-[120px] w-auto object-contain md:mx-0"
               />
-              <h3 className="text-xl font-semibold">Mobile App Development</h3>
+
+              <h3 className="text-xl font-semibold">
+                Software & App Development
+              </h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                Mobile apps and web apps designed around your business
-                processes, customers and future growth.
+                Custom software, business systems, web applications and mobile
+                apps built around real workflows, customers and future growth,
+                from booking platforms and dashboards to bespoke digital
+                products.
               </p>
             </div>
 
@@ -243,16 +255,21 @@ export default function Home() {
             >
               <Image
                 src="/head_graphic.png"
-                alt="Support icon"
+                alt="SEO and website support services by FM Digital"
                 width={175}
                 height={175}
                 className="mx-auto h-[120px] w-auto object-contain md:mx-0"
               />
-              <h3 className="text-xl font-semibold">SEO & Ongoing Support</h3>
+
+              <h3 className="text-xl font-semibold">
+                SEO & Website Support
+              </h3>
 
               <p className="mt-3 text-sm text-gray-300">
-                SEO-focused improvements, website maintenance and ongoing
-                digital support to keep your online presence moving forward.
+                Technical and on-page SEO, website optimisation, maintenance
+                and ongoing digital support designed to improve Google search
+                visibility, strengthen local rankings and keep your website
+                performing.
               </p>
             </div>
           </div>
@@ -260,7 +277,7 @@ export default function Home() {
 
         <section className="mt-24">
           <h2 className="text-center text-3xl font-light leading-tight tracking-tight">
-            Featured Projects
+            Featured Web Design Project
           </h2>
 
           <div
@@ -283,7 +300,7 @@ export default function Home() {
                   <div className="relative h-[220px] overflow-hidden rounded-[14px] bg-black md:h-full">
                     <Image
                       src="/gillespie_screenshot.png"
-                      alt="P. Gillespie & Son Stonework website"
+                      alt="P. Gillespie & Son Stonework website designed and developed by FM Digital"
                       fill
                       loading="eager"
                       className="object-cover object-top transition duration-700 group-hover:scale-105"
@@ -294,7 +311,7 @@ export default function Home() {
 
                 <div className="flex flex-col justify-center p-6 md:p-8">
                   <p className="text-sm uppercase tracking-[0.3em] text-[#2f8f55]">
-                    Featured Website
+                    Featured Web Design Project
                   </p>
 
                   <h3 className="mt-4 text-[1.9rem] font-light leading-tight text-white md:text-4xl">
@@ -302,8 +319,9 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-4 max-w-[34ch] text-[1.02rem] leading-8 text-white/65">
-                    Premium trade website built for dry stone dyking and
-                    stonework services across Argyll, Oban and the Western
+                    SEO-ready trade website designed and developed by FM Digital
+                    for P. Gillespie & Son, targeting dry stone dyking and
+                    stonework customers across Argyll, Oban and the Western
                     Isles.
                   </p>
 
@@ -311,16 +329,18 @@ export default function Home() {
                     <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                       Web Design
                     </span>
+
                     <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
-                      Development
+                      Website Development
                     </span>
+
                     <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
-                      SEO Ready
+                      SEO Optimised
                     </span>
                   </div>
 
                   <div className="mt-7 flex items-center gap-3 text-sm text-[#2f8f55]">
-                    <span>View project</span>
+                    <span>View website project</span>
                     <span className="transition duration-300 group-hover:translate-x-1">
                       →
                     </span>
@@ -334,8 +354,9 @@ export default function Home() {
 
       <footer className="mt-24 border-t border-white/10 py-6 text-center text-xs text-white/40">
         <p>© 2026 FM Digital. All rights reserved.</p>
+
         <p className="mt-1">
-          Website by{" "}
+          Glasgow-based web design, software development and app development by{" "}
           <Link href="/" className="transition hover:text-[#2f8f55]">
             FM Digital
           </Link>

@@ -43,7 +43,7 @@ export default function ContactPage() {
         <nav className="relative mb-6 flex items-center justify-center pt-6 md:mb-20 md:justify-between">
           <Image
             src="/logo.png"
-            alt="FM Digital"
+            alt="FM Digital web design and software development"
             width={220}
             height={100}
             loading="eager"
@@ -54,13 +54,25 @@ export default function ContactPage() {
             <Link href="/" className="transition hover:text-[#2f8f55]">
               Home
             </Link>
-            <Link href="/services" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/services"
+              className="transition hover:text-[#2f8f55]"
+            >
               Services
             </Link>
-            <Link href="/project" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/project"
+              className="transition hover:text-[#2f8f55]"
+            >
               Projects
             </Link>
-            <Link href="/contact" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/contact"
+              className="transition hover:text-[#2f8f55]"
+            >
               Contact
             </Link>
           </div>
@@ -75,11 +87,13 @@ export default function ContactPage() {
                 menuOpen ? "translate-y-[6px] rotate-45" : ""
               }`}
             />
+
             <span
               className={`h-[2px] w-6 bg-white transition-opacity duration-500 ${
                 menuOpen ? "opacity-0" : "opacity-100"
               }`}
             />
+
             <span
               className={`h-[2px] w-6 bg-white transition-transform duration-500 ${
                 menuOpen ? "-translate-y-[6px] -rotate-45" : ""
@@ -140,8 +154,9 @@ export default function ContactPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0 md:max-w-lg">
-              Get in touch to discuss a website, landing page, mobile app, web
-              app or SEO-focused digital project.
+              Looking for web design, software development, a mobile app or SEO
+              support? FM Digital is based in Glasgow and works with businesses
+              across Scotland and the UK. Get in touch to discuss your project.
             </p>
 
             <div className="mx-auto mt-8 h-[2px] w-16 bg-[#2f8f55] md:mx-0" />
@@ -153,7 +168,7 @@ export default function ContactPage() {
                 contactRefs.current[0] = el;
               }}
               data-index="0"
-              className={`rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-1100 ${
+              className={`flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-1100 ${
                 visibleBoxes[0]
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
@@ -168,14 +183,16 @@ export default function ContactPage() {
                 <path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.2l-10 6.25L2 5.2V5Zm0 2.6v11.4A2 2 0 0 0 4 21h16a2 2 0 0 0 2-2V7.6l-9.4 5.9a1 1 0 0 1-1.2 0L2 7.6Z" />
               </svg>
 
-              <h3 className="mt-6 text-xl font-light text-white">Email</h3>
+              <h3 className="mt-6 text-xl font-light text-white">
+                Email
+              </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Email FM Digital to discuss your website, app or digital
-                project.
+                Email FM Digital to discuss web design, custom software, mobile
+                app development or SEO support.
               </p>
 
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-auto flex items-center justify-between pt-6">
                 <Link
                   href="mailto:fmdigital.uk@gmail.com"
                   className="text-sm text-[#2f8f55] transition hover:text-white"
@@ -192,7 +209,7 @@ export default function ContactPage() {
                 contactRefs.current[1] = el;
               }}
               data-index="1"
-              className={`rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all delay-200 duration-1100 ${
+              className={`flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all delay-200 duration-1100 ${
                 visibleBoxes[1]
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
@@ -207,14 +224,16 @@ export default function ContactPage() {
                 <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.2 0-.9-.1-1.8-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v7h3.1Z" />
               </svg>
 
-              <h3 className="mt-6 text-xl font-light text-white">Facebook</h3>
+              <h3 className="mt-6 text-xl font-light text-white">
+                Facebook
+              </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Follow FM Digital on Facebook for website, app, SEO and digital
-                project updates.
+                Follow FM Digital for web design, software, app development,
+                SEO and digital project updates.
               </p>
 
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-auto flex items-center justify-between pt-6">
                 <Link
                   href="https://www.facebook.com/people/FM-Digital/61588982026581/"
                   target="_blank"
@@ -233,7 +252,7 @@ export default function ContactPage() {
                 contactRefs.current[2] = el;
               }}
               data-index="2"
-              className={`rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all delay-400 duration-1100 ${
+              className={`flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all delay-400 duration-1100 ${
                 visibleBoxes[2]
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
@@ -249,17 +268,25 @@ export default function ContactPage() {
               >
                 <rect x="3" y="3" width="18" height="18" rx="5" />
                 <circle cx="12" cy="12" r="4" />
-                <circle cx="17" cy="7" r="1.2" fill="#2f8f55" stroke="none" />
+                <circle
+                  cx="17"
+                  cy="7"
+                  r="1.2"
+                  fill="#2f8f55"
+                  stroke="none"
+                />
               </svg>
 
-              <h3 className="mt-6 text-xl font-light text-white">Instagram</h3>
+              <h3 className="mt-6 text-xl font-light text-white">
+                Instagram
+              </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Follow or message FM Digital on Instagram for project updates
-                and digital services.
+                Follow FM Digital on Instagram for website, software, app and
+                digital project updates.
               </p>
 
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-auto flex items-center justify-between pt-6">
                 <Link
                   href="https://www.instagram.com/fmdigital.uk"
                   target="_blank"
@@ -278,8 +305,9 @@ export default function ContactPage() {
 
       <footer className="mt-24 border-t border-white/10 py-6 text-center text-xs text-white/40">
         <p>© 2026 FM Digital. All rights reserved.</p>
+
         <p className="mt-1">
-          Website by{" "}
+          Glasgow-based web design, software development and app development by{" "}
           <Link href="/" className="transition hover:text-[#2f8f55]">
             FM Digital
           </Link>

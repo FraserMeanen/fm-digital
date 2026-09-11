@@ -47,7 +47,7 @@ export default function ProjectsPage() {
         <nav className="relative mb-6 flex items-center justify-center pt-6 md:mb-20 md:justify-between">
           <Image
             src="/logo.png"
-            alt="FM Digital"
+            alt="FM Digital web design and software development"
             width={220}
             height={100}
             loading="eager"
@@ -58,13 +58,25 @@ export default function ProjectsPage() {
             <Link href="/" className="transition hover:text-[#2f8f55]">
               Home
             </Link>
-            <Link href="/services" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/services"
+              className="transition hover:text-[#2f8f55]"
+            >
               Services
             </Link>
-            <Link href="/project" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/project"
+              className="transition hover:text-[#2f8f55]"
+            >
               Projects
             </Link>
-            <Link href="/contact" className="transition hover:text-[#2f8f55]">
+
+            <Link
+              href="/contact"
+              className="transition hover:text-[#2f8f55]"
+            >
               Contact
             </Link>
           </div>
@@ -79,11 +91,13 @@ export default function ProjectsPage() {
                 menuOpen ? "translate-y-[6px] rotate-45" : ""
               }`}
             />
+
             <span
               className={`h-[2px] w-6 bg-white transition-opacity duration-500 ${
                 menuOpen ? "opacity-0" : "opacity-100"
               }`}
             />
+
             <span
               className={`h-[2px] w-6 bg-white transition-transform duration-500 ${
                 menuOpen ? "-translate-y-[6px] -rotate-45" : ""
@@ -140,13 +154,13 @@ export default function ProjectsPage() {
         <section className="mt-10 md:mt-32">
           <div className="w-full text-center md:w-[34%] md:text-left">
             <h1 className="mx-auto text-4xl font-light leading-tight tracking-tight sm:text-5xl md:mx-0 md:text-6xl">
-              Website & App Projects
+              Web Design, Software & App Projects
             </h1>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0">
-              A collection of FM Digital website, app and digital design
-              projects focused on clean design, strong performance and real
-              business results.
+              Website, software and mobile app projects built by FM Digital,
+              a Glasgow-based digital studio working with businesses across
+              Scotland and the UK.
             </p>
           </div>
 
@@ -181,7 +195,7 @@ export default function ProjectsPage() {
                       <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-white md:h-full md:bg-black">
                         <Image
                           src="/gillespie_screenshot.png"
-                          alt="P. Gillespie and Son Stonework website project by FM Digital"
+                          alt="P. Gillespie and Son website designed and developed by FM Digital"
                           fill
                           loading="eager"
                           className="object-contain object-top"
@@ -205,9 +219,11 @@ export default function ProjectsPage() {
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           Web Design
                         </span>
+
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           Development
                         </span>
+
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           SEO Optimised
                         </span>
@@ -215,6 +231,7 @@ export default function ProjectsPage() {
 
                       <div className="mt-5 flex items-center gap-2 text-sm text-[#2f8f55]">
                         <span>View live site</span>
+
                         <span className="transition duration-300 group-hover:translate-x-1">
                           →
                         </span>
@@ -247,7 +264,7 @@ export default function ProjectsPage() {
                       <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-black md:h-full">
                         <Image
                           src="/one-of-61-screenshot.png"
-                          alt="One of 61 speaker website project by FM Digital"
+                          alt="One of 61 speaker website designed by FM Digital"
                           fill
                           className="object-contain object-top"
                           sizes="(max-width: 768px) 100vw, 46vw"
@@ -270,6 +287,7 @@ export default function ProjectsPage() {
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           Web Design
                         </span>
+
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           Development
                         </span>
@@ -277,6 +295,7 @@ export default function ProjectsPage() {
 
                       <div className="mt-5 flex items-center gap-2 text-sm text-[#2f8f55]">
                         <span>View live site</span>
+
                         <span className="transition duration-300 group-hover:translate-x-1">
                           →
                         </span>
@@ -320,7 +339,7 @@ export default function ProjectsPage() {
                       <div className="relative h-[170px] overflow-hidden rounded-[14px] bg-white md:h-full md:bg-black">
                         <Image
                           src="/bmi-icon-2.png"
-                          alt="Book Me In app project by FM Digital"
+                          alt="Book Me In mobile app developed by FM Digital"
                           fill
                           loading="eager"
                           className="object-contain"
@@ -336,17 +355,19 @@ export default function ProjectsPage() {
 
                       <p className="mt-3 max-w-[28ch] text-[1.02rem] leading-8 text-white/65">
                         Class discovery and booking app connecting customers
-                        with local classes and giving businesses the tools to
-                        manage bookings and schedules.
+                        with local classes and giving businesses tools to manage
+                        bookings and schedules.
                       </p>
 
                       <div className="mt-5 flex flex-wrap gap-2">
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           App Design
                         </span>
+
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           Development
                         </span>
+
                         <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70">
                           iOS
                         </span>
@@ -354,6 +375,7 @@ export default function ProjectsPage() {
 
                       <div className="mt-5 flex items-center gap-2 text-sm text-[#2f8f55]">
                         <span>View on App Store</span>
+
                         <span className="transition duration-300 group-hover:translate-x-1">
                           →
                         </span>
@@ -369,8 +391,9 @@ export default function ProjectsPage() {
 
       <footer className="mt-24 border-t border-white/10 py-6 text-center text-xs text-white/40">
         <p>© 2026 FM Digital. All rights reserved.</p>
+
         <p className="mt-1">
-          Website by{" "}
+          Glasgow-based web design, software development and app development by{" "}
           <Link href="/" className="transition hover:text-[#2f8f55]">
             FM Digital
           </Link>

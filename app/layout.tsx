@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = "https://www.fm-digital.co.uk";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.fm-digital.co.uk"),
+  metadataBase: new URL(baseUrl),
+
+  applicationName: "FM Digital",
 
   icons: {
     icon: "/icon.png",
@@ -23,42 +27,62 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "FM Digital | Websites, Apps & SEO-Focused Digital Content",
+    default: "Web Design Glasgow & Software Development | FM Digital",
     template: "%s | FM Digital",
   },
 
   description:
-    "FM Digital builds websites, landing pages, mobile apps, web apps and SEO-focused digital content for businesses across the UK.",
+    "FM Digital is a Glasgow-based web design and software development studio creating websites, custom software, web apps and mobile apps for businesses across Glasgow, Aberdeen, Scotland and the UK.",
 
   keywords: [
     "FM Digital",
-    "websites",
-    "landing pages",
+    "web design Glasgow",
+    "web designer Glasgow",
+    "website design Glasgow",
+    "website development Glasgow",
+    "web development Glasgow",
+    "software development Glasgow",
+    "software developer Glasgow",
+    "custom software Glasgow",
+    "bespoke software Glasgow",
+    "web app development Glasgow",
+    "app development Glasgow",
+    "mobile app development Glasgow",
+    "web design Aberdeen",
+    "website development Aberdeen",
+    "software development Aberdeen",
+    "software developer Aberdeen",
+    "app development Aberdeen",
+    "web design Scotland",
+    "software development Scotland",
+    "custom software development",
+    "business software development",
+    "web applications",
     "mobile apps",
-    "web apps",
-    "SEO",
-    "digital content",
-    "web development",
-    "app development",
-    "website design UK",
+    "SEO Glasgow",
+    "local SEO",
   ],
 
   authors: [{ name: "FM Digital" }],
   creator: "FM Digital",
   publisher: "FM Digital",
 
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
-    title: "FM Digital | Websites, Apps & SEO-Focused Digital Content",
+    title: "Web Design Glasgow & Software Development | FM Digital",
     description:
-      "Websites, landing pages, mobile apps, web apps and SEO-focused digital content for businesses across the UK.",
-    url: "https://www.fm-digital.co.uk",
+      "Glasgow-based web design, custom software and app development for businesses across Scotland and the UK.",
+    url: baseUrl,
     siteName: "FM Digital",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "FM Digital website, app and SEO services",
+        alt: "FM Digital web design, software development and app development",
       },
     ],
     locale: "en_GB",
@@ -67,16 +91,25 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "FM Digital | Websites, Apps & SEO-Focused Digital Content",
+    title: "Web Design Glasgow & Software Development | FM Digital",
     description:
-      "Websites, landing pages, mobile apps, web apps and SEO-focused digital content for businesses across the UK.",
+      "Glasgow-based web design, custom software and app development for businesses across Scotland and the UK.",
     images: ["/logo.png"],
   },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -84,12 +117,59 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "FM Digital",
+    url: baseUrl,
+    logo: `${baseUrl}/logo.png`,
+    description:
+      "Glasgow-based web design and software development studio creating websites, custom software, web applications and mobile apps for businesses across Scotland and the UK.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Glasgow",
+      addressRegion: "Scotland",
+      addressCountry: "GB",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Glasgow",
+      },
+      {
+        "@type": "City",
+        name: "Aberdeen",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Scotland",
+      },
+      {
+        "@type": "Country",
+        name: "United Kingdom",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/people/FM-Digital/61588982026581/",
+      "https://www.instagram.com/fmdigital.uk",
+    ],
+  };
+
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
+        {children}
+      </body>
     </html>
   );
 }
