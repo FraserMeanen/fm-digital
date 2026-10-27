@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../components/footer";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
@@ -168,10 +169,10 @@ export default function ContactPage() {
               </h1>
 
               <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0 md:max-w-lg">
-                Looking for web design, software development, a mobile app or
-                SEO support? FM Digital is based in Glasgow and works with
-                businesses across Scotland and the UK. Get in touch to discuss
-                your project.
+                Have a digital project in mind? Based in Glasgow, FM Digital
+                works with businesses across Scotland and the UK on websites,
+                software, mobile apps and SEO. Get in touch to discuss your
+                ideas.
               </p>
 
               <div className="mx-auto mt-8 h-[2px] w-16 bg-[#2f8f55] md:mx-0" />
@@ -271,10 +272,10 @@ export default function ContactPage() {
 
                 <div className="relative mt-auto flex items-center justify-between pt-6">
                   <Link
-                    href="mailto:fmdigital.uk@gmail.com"
+                    href="mailto:fraser@fm-digital.co.uk"
                     className="text-sm text-[#2f8f55] transition duration-300 hover:text-white"
                   >
-                    fmdigital.uk@gmail.com
+                    fraser@fm-digital.co.uk
                   </Link>
 
                   <span className="text-[#2f8f55] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -474,20 +475,7 @@ export default function ContactPage() {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-24 border-t border-white/10 px-4 py-7 text-center text-xs text-white/40">
-        <p>© 2026 FM Digital. All rights reserved.</p>
-
-        <p className="mt-1">
-          Glasgow-based web design, software development and app development by{" "}
-          <Link
-            href="/"
-            className="transition duration-300 hover:text-[#2f8f55]"
-          >
-            FM Digital
-          </Link>
-          .
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }

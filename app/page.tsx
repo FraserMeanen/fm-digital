@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "./components/footer";
 import { useRef, useState } from "react";
 import {
   motion,
@@ -94,7 +95,7 @@ export default function Home() {
       image: "/web_graphic.png",
       alt: "Web design and website development services by FM Digital",
       title: "Web Design & Development",
-      text: "Professional web design and website development for businesses in Glasgow, Aberdeen and across the UK, with responsive design, fast performance, clear user journeys and SEO-ready foundations built to generate enquiries.",
+      text: "Professional web design and website development for businesses in Glasgow and across the UK, with responsive design, fast performance, clear user journeys and SEO-ready foundations built to generate enquiries.",
     },
     {
       image: "/phone_graphic.png",
@@ -299,8 +300,7 @@ export default function Home() {
                 <p className="mx-auto mt-6 max-w-md text-[1.02rem] leading-7 text-gray-300 sm:text-lg sm:leading-relaxed md:mx-0 md:max-w-md">
                   FM Digital is a Glasgow-based web design and software
                   development studio creating modern websites, custom software,
-                  web apps and mobile apps for businesses across Glasgow,
-                  Aberdeen, Scotland and the UK.
+                  web apps and mobile apps for businesses across UK.
                 </p>
 
                 <div className="mt-8 flex justify-center md:justify-start">
@@ -329,7 +329,6 @@ export default function Home() {
 
                     <span className="relative flex items-center gap-3">
                       Get Started
-
                       <motion.span
                         className="inline-block transition-transform duration-300 group-hover:translate-x-1"
                         animate={
@@ -511,10 +510,7 @@ export default function Home() {
           </section>
 
           {/* FEATURED PROJECT */}
-          <section
-            ref={featuredProjectRef}
-            className="relative mt-28 md:mt-36"
-          >
+          <section ref={featuredProjectRef} className="relative mt-28 md:mt-36">
             <motion.div
               initial={
                 reduceMotion
@@ -654,20 +650,7 @@ export default function Home() {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-24 border-t border-white/10 px-4 py-7 text-center text-xs text-white/40 md:px-6">
-        <p>© 2026 FM Digital. All rights reserved.</p>
-
-        <p className="mt-1">
-          Glasgow-based web design, software development and app development by{" "}
-          <Link
-            href="/"
-            className="transition duration-300 hover:text-[#2f8f55]"
-          >
-            FM Digital
-          </Link>
-          .
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../components/footer";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
@@ -167,10 +168,10 @@ export default function ServicesPage() {
               </h1>
 
               <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-gray-300 md:mx-0 md:max-w-xl">
-                FM Digital is a Glasgow-based web design and software development
-                studio providing websites, custom software, web applications,
-                mobile apps and SEO services for businesses across Glasgow,
-                Aberdeen, Scotland and the UK.
+                FM Digital is a Glasgow-based digital development studio
+                creating websites, custom software, web applications and mobile
+                apps, alongside SEO services, for businesses across Scotland and
+                the UK.
               </p>
             </motion.div>
 
@@ -241,8 +242,7 @@ export default function ServicesPage() {
                     Professional web design and custom website development
                     focused on fast performance, responsive layouts, search
                     visibility and turning visitors into enquiries. We build
-                    websites for businesses in Glasgow, Aberdeen and across the
-                    UK.
+                    websites for businesses across Scotland and the UK.
                   </p>
 
                   <ul className="mx-auto mt-6 max-w-md space-y-3 text-gray-300 md:mx-0">
@@ -255,7 +255,9 @@ export default function ServicesPage() {
 
                     <li className="flex items-start gap-3">
                       <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#2f8f55]" />
-                      <span>Responsive, fast and modern website development</span>
+                      <span>
+                        Responsive, fast and modern website development
+                      </span>
                     </li>
 
                     <li className="flex items-start gap-3">
@@ -499,20 +501,7 @@ export default function ServicesPage() {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-24 border-t border-white/10 px-4 py-7 text-center text-xs text-white/40 md:px-6">
-        <p>© 2026 FM Digital. All rights reserved.</p>
-
-        <p className="mt-1">
-          Glasgow-based web design, software development and app development by{" "}
-          <Link
-            href="/"
-            className="transition duration-300 hover:text-[#2f8f55]"
-          >
-            FM Digital
-          </Link>
-          .
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }

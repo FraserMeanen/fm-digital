@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../components/footer";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
@@ -294,9 +295,9 @@ export default function ProjectsPage() {
               </h1>
 
               <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-white/60 md:mx-0">
-                Website, software and mobile app projects built by FM Digital,
-                a Glasgow-based digital studio working with businesses across
-                Scotland and the UK.
+                A selection of digital projects created by FM Digital, a
+                Glasgow-based studio building websites, software and mobile apps
+                for businesses across Scotland and the UK.
               </p>
             </motion.div>
 
@@ -422,20 +423,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-24 border-t border-white/10 px-4 py-7 text-center text-xs text-white/40 md:px-6">
-        <p>© 2026 FM Digital. All rights reserved.</p>
-
-        <p className="mt-1">
-          Glasgow-based web design, software development and app development by{" "}
-          <Link
-            href="/"
-            className="transition duration-300 hover:text-[#2f8f55]"
-          >
-            FM Digital
-          </Link>
-          .
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
